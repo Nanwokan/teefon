@@ -20,6 +20,8 @@ app.use(cors({
   credentials: true
 }));
 
+console.log("FRONTEND_URL autorisé :", allowedOrigins);
+
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
