@@ -1,5 +1,5 @@
 const mysqlDB = require("../../config/mysql");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 
 async function userSignUpController(req, res) {
     try {
