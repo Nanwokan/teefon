@@ -37,7 +37,7 @@ const OrderSuccess = () => {
         to="/"
         className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-lg transition"
       >
-        Retour à l'accueil
+        Retour à l&apos;accueil
       </Link>
     </div>
   );

@@ -38,9 +38,9 @@ const CategoryWiseProductDisplay = ({ category, heading }) => {
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,320px))] justify-between md:gap-6 overflow-x-scroll scrollbar-none transition-all">
         {loading
-          ? loadingList.map((product, index) => {
+          ? loadingList.map((_, index) => {
               return (
-                <div className="w-full min-w-[300px] md:min-w-[340px] max-w-[300px] md:max-w-[340px] bg-white rounded-sm shadow ">
+                <div key={index} className="w-full min-w-[300px] md:min-w-[340px] max-w-[300px] md:max-w-[340px] bg-white rounded-sm shadow ">
                   <div className="bg-slate-200 h-48  min-w-[280px] md:min-w-[165px] p-2 flex justify-center items-center animate-pulse"></div>
                   <div className="p-4 grid gap-3">
                     <h2 className="font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black bg-slate-200 py-2 animate-pulse rounded-full"></h2>
@@ -56,7 +56,8 @@ const CategoryWiseProductDisplay = ({ category, heading }) => {
             })
           : data.map((product, index) => {
               return (
-                <Link
+                <Link 
+                  key={index}
                   to={'/product/' + product?._id}
                   className="w-full min-w-[300px] md:min-w-[340px] max-w-[300px] md:max-w-[340px] bg-white rounded-sm shadow "
                   onClick={scrollTop}

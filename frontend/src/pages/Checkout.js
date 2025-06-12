@@ -1,10 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SummaryApi from '../common';
-import Context from '../context';
 import displayINRCurrency from '../helpers/displayCurrency';
 
 const Checkout = () => {
-  const context = useContext(Context);
   const [cartItems, setCartItems] = useState([]);
   const [reference, setReference] = useState('');
   const [user, setUser] = useState(null);
@@ -248,7 +246,7 @@ const Checkout = () => {
                 onClick={() => setHasPaid(true)}
                 className="mt-4 bg-green-500 text-white p-2 rounded"
               >
-                J'ai effectué le paiement
+                J&apos;ai effectué le paiement
               </button>
             </div>
           )}

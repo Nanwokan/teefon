@@ -32,7 +32,7 @@ const CategoryList = () => {
                 ></div>
               );
             })
-          : categoryProduct.map((product, index) => {
+          : categoryProduct.map((product) => {
               return (
                 <Link
                   to={'/product-category?category=' + product?.category}

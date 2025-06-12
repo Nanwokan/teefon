@@ -6,9 +6,9 @@ const About = () => {
         <h1 className="text-4xl font-bold mb-4">À propos de nous</h1>
         <p className="text-gray-700 max-w-2xl mx-auto">
           Teefon a été fondée pour répondre à une demande croissante de meubles
-          uniques, écologiques et personnalisables en Côte d'Ivoire. Nous
+          uniques, écologiques et personnalisables en Côte d&apos;Ivoire. Nous
           croyons que chaque espace de vie mérite des meubles qui reflètent la
-          personnalité et les besoins de ceux qui l'habitent.
+          personnalité et les besoins de ceux qui l&apos;habitent.
         </p>
         <a
           href="#mission"
@@ -24,11 +24,11 @@ const About = () => {
         <p className="text-gray-700 mb-4 max-w-2xl mx-auto">
           Notre mission est de proposer des meubles de qualité, fabriqués à
           partir de matériaux durables et écologiques, tout en offrant une
-          expérience d'achat simple et personnalisée.
+          expérience d&apos;achat simple et personnalisée.
         </p>
         <p className="text-gray-700 max-w-2xl mx-auto">
-          Notre vision est de devenir le leader en Côte d'Ivoire dans le domaine
-          des meubles sur mesure, respectueux de l'environnement, et adaptés aux
+          Notre vision est de devenir le leader en Côte d&apos;Ivoire dans le domaine
+          des meubles sur mesure, respectueux de l&apos;environnement, et adaptés aux
           besoins de chacun.
         </p>
       </section>
@@ -74,7 +74,7 @@ const About = () => {
               et plastique, adaptés à tous les goûts et tous les budgets.
             </p>
             <p className="mt-4">
-              En plus de nos collections prêtes à l'emploi, nous offrons un
+              En plus de nos collections prêtes à l&apos;emploi, nous offrons un
               service de personnalisation unique pour des meubles sur mesure
               parfaitement adaptés à votre espace et votre style.
             </p>
@@ -88,7 +88,7 @@ const About = () => {
       <section className="text-center">
         <h2 className="text-3xl font-semibold mb-6">Notre équipe</h2>
         <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-          Notre équipe est composée de designers talentueux, d'artisans
+          Notre équipe est composée de designers talentueux, d&apos;artisans
           passionnés et de professionnels du service client, tous dédiés à
           offrir le meilleur produit et la meilleure expérience à nos clients.
         </p>
@@ -111,7 +111,7 @@ const About = () => {
           En choisissant Teefon, vous optez pour la qualité, la
           personnalisation, et un service exceptionnel. Nous offrons une
           garantie satisfaction et une livraison rapide partout en Côte
-          d'Ivoire.
+          d&apos;Ivoire.
         </p>
         <p className="text-gray-700 mt-4 max-w-3xl mx-auto">
           Nous faisons plus que vendre des meubles. Nous créons des pièces qui

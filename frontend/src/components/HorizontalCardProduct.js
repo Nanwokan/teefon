@@ -12,7 +12,6 @@ const HorizontalCardProduct = ({ category, heading }) => {
   const [loading, setLoading] = useState(true);
   const loadingList = new Array(13).fill(null);
 
-  const [sroll, setScroll] = useState(0);
   const scrollElement = useRef();
 
   const { fetchUserAddToCart } = useContext(Context);
@@ -81,7 +80,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
                 </div>
               );
             })
-          : data.map((product, index) => {
+          : data.map((product) => {
               return (
                 <Link
                   key={product?._id}

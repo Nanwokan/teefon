@@ -163,7 +163,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
                 <span className="text-4xl">
                   <FaUpload />
                 </span>
-                <p className="text-sm">Importer l'Image du Produit</p>
+                <p className="text-sm">Importer l&apos;Image du Produit</p>
                 <input
                   type="file"
                   id="uploadImageInput"
@@ -178,7 +178,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
               <div className="flex items-center gap-2">
                 {data.productImage.map((el, index) => {
                   return (
-                    <div className="relative group">
+                    <div key={index} className="relative group">
                       <img
                         src={el}
                         alt={el}
@@ -202,7 +202,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
               </div>
             ) : (
               <p className="text-red-600 text-xs">
-                *veuillez importer l'image du produit
+                *veuillez importer l&apos;image du produit
               </p>
             )}
           </div>

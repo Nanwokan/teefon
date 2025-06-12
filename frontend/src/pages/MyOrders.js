@@ -7,7 +7,6 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [products, setProducts] = useState([]);
-  const [selectedOrderId, setSelectedOrderId] = useState(null);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
   const fetchOrders = async () => {
@@ -29,7 +28,6 @@ const MyOrders = () => {
 
   const handleViewProducts = async (order) => {
     try {
-      setSelectedOrderId(order.id);
       setSelectedOrder(order);
 
       const response = await fetch(
@@ -146,6 +144,7 @@ const MyOrders = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 max-h-[80vh] overflow-y-auto relative">
             <button
+              aria-label="Fermer la modale"
               className="absolute top-2 right-2 text-gray-600 hover:text-red-500"
               onClick={() => setOpenModal(false)}
             >
@@ -161,7 +160,7 @@ const MyOrders = () => {
             ) : (
               products.map((item) => (
                 <div
-                  key={item.id}
+                  key={`${item.id}-${item.product_name}`}
                   className="flex items-center gap-4 border-b py-3"
                 >
                   <img

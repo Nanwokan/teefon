@@ -23,23 +23,25 @@ const CategoryProduct = () => {
   const [sortBy, setSortBy] = useState('');
 
   const fetchData = async () => {
-    const response = await fetch(SummaryApi.filterProduct.url, {
-      method: SummaryApi.filterProduct.method,
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        category: filterCategoryList,
-      }),
-    });
+  setLoading(true); // ← ici
+  const response = await fetch(SummaryApi.filterProduct.url, {
+    method: SummaryApi.filterProduct.method,
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      category: filterCategoryList,
+    }),
+  });
 
-    const dataResponse = await response.json();
+  const dataResponse = await response.json();
+  setData(dataResponse?.data || []);
+  setLoading(false); // ← ici
+};
 
-    setData(dataResponse?.data || []);
-  };
 
   const handleSelectCategory = (e) => {
-    const { name, value, checked } = e.target;
+    const { value, checked } = e.target;
 
     setSelectCategory((preve) => {
       return {
@@ -89,8 +91,6 @@ const CategoryProduct = () => {
     }
   };
 
-  useEffect(() => {}, [sortBy]);
-
   return (
     <div className="container mx-auto p-4">
       {/**desktop version */}
@@ -135,7 +135,7 @@ const CategoryProduct = () => {
             <form className="text-sm flex flex-col gap-2 py-2">
               {productCategory.map((categoryName, index) => {
                 return (
-                  <div className="flex items-center gap-3">
+                  <div key={categoryName?.value + index} className="flex items-center gap-3">
                     <input
                       type="checkbox"
                       name={'category'}
